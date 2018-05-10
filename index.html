@@ -1,15 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Esto no es Trivago</title>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/svg/148/148845.svg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container-fluid" id="contenedor-nav">
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Esto no es trivago</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#ranking">Ranking</a></li>
+              <li><a href="#graficos">Gráficos</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="#ranking">Ranking</a></li>
+        <li><a href="#graficos">Gráficos</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
     </div>
-    <script src="index.js"></script>
-</body>
+
+    <div class="container-fluid" id="main-container">
+      <div class="row">
+        <div class="col s6 m5 l3" id="columna-parametros">
+          <div class="section">
+            <form action="#" id="form-params">
+              <p>
+                <label>
+                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <span class="span-check">Seguridad</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <span class="span-check">Distancia</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <span class="span-check">Asequibilidad</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" class="filled-in"/>
+                  <span class="span-check">Bares</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" class="filled-in" />
+                  <span class="span-check">Centros comerciales</span>
+                </label>
+              </p>
+            </form>
+
+            <a class="waves-effect waves-light btn" id="BT_actualizar"><i class="material-icons left">sync</i>Actualizar mapa</a>
+            <a class="waves-effect waves-light btn" id="BT_eliminar"><i class="material-icons left">clear</i>Eliminar filtros</a>
+
+          </div>
+        </div>
+        <div class="col s6 m7  l9" id="columna-mapa">
+          <div id="map">
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <a name="ranking" id="ranking"></a>
+
+      <div class="row">
+        <div class="col s12" id="columna-tabla">
+          <table class="reponsive-table">
+            <thead>
+              <tr>
+                  <th>#</th>
+                  <th>Distrito</th>
+                  <th>Parametro 1</th>
+                  <th>Parametro 2</th>
+                  <th>Parametro 3</th>
+                  <th>Parametro 4</th>
+                  <th>Parametro 5</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Distrito 1</td>
+                <td>90</td>
+                <td>80</td>
+                <td>70</td>
+                <td>60</td>
+                <td>90</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Distrito 2</td>
+                <td>90</td>
+                <td>80</td>
+                <td>70</td>
+                <td>60</td>
+                <td>90</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Distrito 3</td>
+                <td>90</td>
+                <td>80</td>
+                <td>70</td>
+                <td>60</td>
+                <td>90</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <a name="graficos" id="graficos"></a>
+      
+      <div class="container-fluid">
+
+      </div>
+
+      <div class="divider"></div>
+
+      <a name="about" id="about"></a>
+
+    </div>
+  </body>
+
+  <script type="text/javascript" src="index.js">
+
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCosAHLdu4qB2IFeQ3b0lB38pSO0QQtwu0&callback=initMap">
+    </script>
 </html>
